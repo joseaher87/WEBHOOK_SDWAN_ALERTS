@@ -141,6 +141,3 @@ Go back to the server and end the Webhook service by doing a CTRL + C
 To se the script on the terminal use the command
 
     cat webhook.py
-
-You will see the following code
-
