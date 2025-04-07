@@ -30,18 +30,18 @@ install requirements
 
 ## Ubuntu Server
 
-     10.1.1.100
+     <<Ubuntu_server_ip>>
 
 ## vManage
 
-     https://10.1.1.200
-     ssh 10.1.1.200
+  https://<<vManage_ip>>
+     ssh <<vManage_ip>>
 
 ## Routers
 
 SSH
 
-     Router1: 10.1.1.150
+    Router1: <<Router1_ip>>
      
 
 ## credentials
@@ -71,9 +71,9 @@ Start the webhook service
 
 Open your laptop terminal and send the following commands
 
-     ping  10.1.1.100
+     ping  <<Ubuntu_server_ip>>
 
-     curl -X POST http://10.1.1.100:8000/webhook \
+     curl -X POST http://<<Ubuntu_server_ip>>:8000/webhook \
           -H "Content-Type: application/json" \
           -d '{"message": "Hello, webhook LAPTOP!"}'
 
@@ -83,7 +83,7 @@ Expect result is ping should be succesful and you should get a webex message
 
 connect to vmanage SSH and test from CLI terminal
 
-     ping  10.1.1.100
+     ping  <<Ubuntu_server_ip>>
 
 for CURL you need to move to vmanage shell
 
@@ -91,7 +91,7 @@ for CURL you need to move to vmanage shell
 
 Once on the shell send the CURL command
 
-     curl -X POST http://10.1.1.100:8000/webhook \
+     curl -X POST http://<<Ubuntu_server_ip>>:8000/webhook \
           -H "Content-Type: application/json" \
           -d '{"message": "Hello, webhook! VMANAGE"}'
 
@@ -119,7 +119,7 @@ Confirm is set to all severity levels and the alarm name is "BFD TLOC DOWN" (You
 
 Scroll down to the WebHook section and verify URL
 
-     http://10.1.1.100:8000/webhook
+     http://<<Ubuntu_server_ip>>:8000/webhook
 
 Configure user and password for webhook.
 
