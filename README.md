@@ -35,7 +35,7 @@ install requirements
 ## vManage
 
   https://<<vManage_ip>>
-     ssh <<vManage_ip>>
+  ssh <<vManage_ip>>
 
 ## Routers
 
